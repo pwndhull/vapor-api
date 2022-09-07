@@ -24,7 +24,7 @@ public func configure(_ app: Application) throws {
 	}
 	
 	app.migrations.add(CreateSongs() )
-	if app.environment = .development {
+	if app.environment == .development {
 		try app.autoMigrate().wait()
 	}
 		//    app.migrations.add(CreateTodo())
